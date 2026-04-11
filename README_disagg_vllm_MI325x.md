@@ -7,8 +7,8 @@ Two topologies are provided:
 
 | Script | Topology | Nodes |
 |--------|----------|-------|
-| `local_test_dsr1_fp8_mi355x_vllm-disagg.sh` | 1 Prefill + 1 Decode | 2 |
-| `local_test_dsr1_fp8_mi355x_vllm-disagg-1p2d.sh` | 1 Prefill + 2 Decode | 3 |
+| `local_test_dsr1_fp8_mi325x_vllm-disagg.sh` | 1 Prefill + 1 Decode | 2 |
+| `local_test_dsr1_fp8_mi325x_vllm-disagg-1p2d.sh` | 1 Prefill + 2 Decode | 3 |
 
 ## Prerequisites
 
@@ -124,7 +124,7 @@ ls /dev/shm/Deepseek-R1-0528/*.safetensors | wc -l
 ### 1P+1D (2 nodes)
 
 Edit the node IPs and model paths at the top of
-`local_test_dsr1_fp8_mi355x_vllm-disagg.sh`, or override via environment
+`local_test_dsr1_fp8_mi325x_vllm-disagg.sh`, or override via environment
 variables:
 
 ```bash
@@ -133,7 +133,7 @@ DECODE_NODE=<DECODE_IP> \
 PREFILL_MODEL_HOST_DIR=/dev/shm \
 DECODE_MODEL_HOST_DIR=/dev/shm \
 ISL=1024 OSL=1024 CONC_LIST="64" \
-bash local_test_dsr1_fp8_mi355x_vllm-disagg.sh
+bash local_test_dsr1_fp8_mi325x_vllm-disagg.sh
 ```
 
 ### 1P+2D (3 nodes)
@@ -146,7 +146,7 @@ PREFILL_MODEL_HOST_DIR=/dev/shm \
 DECODE1_MODEL_HOST_DIR=/dev/shm \
 DECODE2_MODEL_HOST_DIR=/dev/shm \
 ISL=1024 OSL=1024 CONC_LIST="64" \
-bash local_test_dsr1_fp8_mi355x_vllm-disagg-1p2d.sh
+bash local_test_dsr1_fp8_mi325x_vllm-disagg-1p2d.sh
 ```
 
 ### Concurrency Sweep
@@ -155,7 +155,7 @@ Pass multiple values to `CONC_LIST` to benchmark at several concurrency
 levels in a single run:
 
 ```bash
-ISL=1024 OSL=1024 CONC_LIST="32 64 128 256" bash local_test_dsr1_fp8_mi355x_vllm-disagg.sh
+ISL=1024 OSL=1024 CONC_LIST="32 64 128 256" bash local_test_dsr1_fp8_mi325x_vllm-disagg.sh
 ```
 
 ## Environment Variables Reference
@@ -188,7 +188,7 @@ The scripts stream the prefill node's output to stdout. For long runs, use
 
 ```bash
 tmux new -s bench
-ISL=1024 OSL=1024 bash local_test_dsr1_fp8_mi355x_vllm-disagg.sh
+ISL=1024 OSL=1024 bash local_test_dsr1_fp8_mi325x_vllm-disagg.sh
 # Ctrl-b d to detach, tmux attach -t bench to reattach
 ```
 
