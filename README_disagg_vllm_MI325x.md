@@ -86,7 +86,7 @@ The repository must be present at the same path on all nodes (default
 
 ```bash
 # On the driver node
-git clone -b amd/vllm_disagg_mvp_dev https://github.com/SemiAnalysisAI/InferenceX.git ~/InferenceX
+git clone -b amd/vllm_disagg_mvp_dev https://github.com/ppalanga/InferenceX.git ~/InferenceX
 
 # Copy to remote nodes
 scp -r ~/InferenceX user@<NODE_IP>:~/InferenceX
