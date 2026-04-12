@@ -1,5 +1,17 @@
 # Combined guides: SGLang PD and disaggregated vLLM (MI300X / MI325X)
 
+## Document structure
+
+This file is three guides in sequence: **SGLang** prefill–decode disaggregation (MI300X and MI325X), then **vLLM** disaggregation on **MI325X**, then **vLLM** on **MI300X**. 
+
+1. **SGLang prefill–decode (PD) disaggregation on AMD MI300X / MI325X**   
+
+
+2. **PD Disaggregated vLLM Inference — DeepSeek-R1-0528 FP8 on MI325X** 
+ 
+
+3. **DeepSeek-R1 FP8 — 1P+2D Disaggregated vLLM Benchmark**   
+
 ---
 
 # SGLang prefill–decode (PD) disaggregation on AMD MI300X / MI325X
