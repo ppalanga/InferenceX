@@ -1,4 +1,4 @@
-# Combined guides: SGLang PD and disaggregated vLLM (MI300X / MI325X)
+# Combined guides: PD diaggregation in SGLang and vLLM (MI300X / MI325X)
 
 ## Document structure
 
