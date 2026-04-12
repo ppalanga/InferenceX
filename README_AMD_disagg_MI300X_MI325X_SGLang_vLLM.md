@@ -390,7 +390,7 @@ tail -f ~/logs/vllm_disagg/benchmark_logs_<TIMESTAMP>/ssh_decode_<IP>.log
 ---
 
 
-# DeepSeek-R1 FP8 — 1P+2D Disaggregated vLLM Benchmark
+# DeepSeek-R1 FP8 — 1P+2D Disaggregated vLLM Benchmark on MI300x
 
 Run DeepSeek-R1-0528 in a **1-Prefill + 2-Decode** disaggregated configuration
 across three MI300X nodes using vLLM with MoRI-IO KV transfer.
