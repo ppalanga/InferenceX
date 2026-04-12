@@ -1,7 +1,5 @@
 # Combined guides: SGLang PD and disaggregated vLLM (MI300X / MI325X)
 
-The following sections copy the upstream documents with only the troubleshooting sections removed.
-
 ---
 
 # SGLang prefill–decode (PD) disaggregation on AMD MI300X / MI325X
